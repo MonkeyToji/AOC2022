@@ -1,0 +1,8 @@
+//Get input
+const input = $("pre").innerText.split("\n\n").map(elf => elf.split("\n").reduce((a, c) => a + (+c), 0))
+
+//Part One
+console.log(Math.max(...input));
+
+//Part Two
+input.sort((a, b) => b - a).slice(0, 3).reduce((a, c) => a + c);
